@@ -1,9 +1,13 @@
-import {Text } from 'react-native'
+import {Text, View } from 'react-native'
+import {routesStyles} from '../styles/styles' 
 
 export function PlantScreen() {
   return (
-    <Text>
-      Planta
-    </Text>
+    <View style={routesStyles.container}>
+        <Text style={routesStyles.text}>
+          Planta
+        </Text>
+    </View>
+    
   )
 }

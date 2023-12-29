@@ -1,10 +1,13 @@
-import {  Text } from 'react-native';
+import {Text, View } from 'react-native'
+import {routesStyles} from '../styles/styles' 
 
 export function SelectorScreen() {
   return (
-    <Text>
-      Home
-    </Text>
+    <View style={routesStyles.container}>
+        <Text style={routesStyles.text}>
+          Selector
+        </Text>
+    </View>
+    
   )
 }
-
