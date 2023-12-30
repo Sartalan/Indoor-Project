@@ -11,8 +11,8 @@ const Shuffle = '../assets/shuffle.png'
 const Plant = '../assets/plant.png'
 const Diagram = '../assets/diagram.png'
 const Setting = '../assets/setting.png'
-const sizeIcons = 40;
-export const topBackgroundColor = '#191515'
+const sizeIcons = 42.5;
+export const topBackgroundColor = '#181921'
 
 const Tab = createMaterialTopTabNavigator();
 

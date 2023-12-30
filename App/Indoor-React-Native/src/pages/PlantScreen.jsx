@@ -1,5 +1,9 @@
-import {Text, View, Image } from 'react-native'
+import {Text, View, Image, StyleSheet } from 'react-native'
 import {routesStyles} from '../styles/pagesStyles' 
+
+var date = new Date().getDate(); //To get the Current Date
+var month = new Date().getMonth() + 1; //To get the Current Month
+var year = new Date().getFullYear(); //To get the Current Year
 
 export function PlantScreen() {
   return (
@@ -9,9 +13,43 @@ export function PlantScreen() {
         </Text>
         <Image
           source={require('./../../assets/plant.png')}
-          style={{width:100, height:100}}
+          style={{width:150, height:150}}
         />
+
+        <View style={plantStyles.bottomContainer}>
+            <View style={plantStyles.bottomBox}>
+                <Text style={plantStyles.bottomText}>{date + ' /'}</Text>
+                <Text style={plantStyles.bottomText}>{month + ' /'}</Text>
+                <Text style={plantStyles.bottomText}>{year}</Text>
+            </View>
+        </View>
     </View>
     
   )
 }
+
+const plantStyles = StyleSheet.create({
+  bottomContainer: {
+    position: "absolute",
+    bottom: 10,
+    right: 30,
+    backgroundColor: 'transparent',
+    borderRadius: 10
+
+  },
+  bottomBox: {
+    flexDirection: 'row',
+    gap: 10,
+    padding: 10
+  },
+
+  bottomText: {
+    color: '#FFFFFFCE',
+    fontSize: 25,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    fontFamily: 'Cochin'
+    
+  }
+
+})
