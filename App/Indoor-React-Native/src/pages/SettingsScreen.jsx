@@ -1,11 +1,11 @@
 import {Text, View } from 'react-native'
-import {routesStyles} from '../styles/styles' 
+import {routesStyles} from '../styles/pagesStyles' 
 
-export function SelectorScreen() {
+export function SettingsScreen() {
   return (
     <View style={routesStyles.container}>
         <Text style={routesStyles.text}>
-          Selector
+          Settings
         </Text>
     </View>
     
