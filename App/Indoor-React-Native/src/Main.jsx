@@ -1,17 +1,18 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import {StyleSheet} from 'react-native'
 import { Image } from 'react-native'
-//?Routes
+//?[Routes]
 import {SelectorScreen} from './pages/SelectorScreen'
 import {PlantScreen} from './pages/PlantScreen'
 import {DiagramScreen} from './pages/DiagramScreen'
 import {SettingsScreen} from './pages/SettingsScreen'
-//?Icons
+//?[Icons && Design]
 const Shuffle = '../assets/shuffle.png'
 const Plant = '../assets/plant.png'
 const Diagram = '../assets/diagram.png'
 const Setting = '../assets/setting.png'
-const sizeIcons = 45;
+const sizeIcons = 40;
+export const topBackgroundColor = '#191515'
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -25,7 +26,7 @@ export function MyTabs() {
       tabBarShowLabel:false,
       tabBarActiveTintColor: '#ffffff',
       tabBarIconStyle: { width: 50, height: 50 },
-      tabBarStyle: { backgroundColor: '#000' },
+      tabBarStyle: { backgroundColor: (topBackgroundColor) },
     }}
     >
       <Tab.Screen name="Home" 
