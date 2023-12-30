@@ -1,4 +1,4 @@
-import {Text, View } from 'react-native'
+import {Text, View, Image } from 'react-native'
 import {routesStyles} from '../styles/pagesStyles' 
 
 export function DiagramScreen() {
@@ -7,6 +7,12 @@ export function DiagramScreen() {
         <Text style={routesStyles.text}>
           Diagrama
         </Text>
+        <View>
+        <Image
+          source={require('./../../assets/diagram.png')}
+          style={{width:100, height:100}}
+        />
+        </View>
     </View>
     
   )

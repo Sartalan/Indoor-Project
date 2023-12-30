@@ -1,11 +1,17 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import {StyleSheet} from 'react-native'
+import { Image } from 'react-native'
 //?Routes
 import {SelectorScreen} from './pages/SelectorScreen'
 import {PlantScreen} from './pages/PlantScreen'
 import {DiagramScreen} from './pages/DiagramScreen'
 import {SettingsScreen} from './pages/SettingsScreen'
-
+//?Icons
+const Shuffle = '../assets/shuffle.png'
+const Plant = '../assets/plant.png'
+const Diagram = '../assets/diagram.png'
+const Setting = '../assets/setting.png'
+const sizeIcons = 45;
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -15,15 +21,50 @@ export function MyTabs() {
     backBehavior='history'
     tabBarPosition='top'
     screenOptions={{
-      tabBarLabelStyle: { fontSize: 12, color: '#fff'  },
-      tabBarItemStyle: { width: 100},
+      tabBarShowIcon:true,
+      tabBarShowLabel:false,
+      tabBarActiveTintColor: '#ffffff',
+      tabBarIconStyle: { width: 50, height: 50 },
       tabBarStyle: { backgroundColor: '#000' },
     }}
     >
-      <Tab.Screen  name="Home" component={SelectorScreen} />
-      <Tab.Screen name="Planta" component={PlantScreen} />
-      <Tab.Screen name="Log" component={DiagramScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen}/>
+      <Tab.Screen name="Home" 
+                  component={SelectorScreen}
+                  options={{
+                    tabBarIcon: ({ color }) => (
+                      <Image
+                        source={require(Shuffle)}
+                        style={{ tintColor: color, width: sizeIcons, height: sizeIcons }}
+                      />
+                    )
+                  }} />
+
+      <Tab.Screen name="Planta" component={PlantScreen} options={{
+                    tabBarIcon: ({ color }) => (
+                      <Image
+                        source={require(Plant)}
+                        style={{ tintColor: color, width: sizeIcons, height: sizeIcons }}
+                      />
+                    )
+                  }} />
+
+      <Tab.Screen name="Log" component={DiagramScreen} options={{
+                    tabBarIcon: ({ color }) => (
+                      <Image
+                        source={require(Diagram)}
+                        style={{ tintColor: color, width: sizeIcons, height: sizeIcons }}
+                      />
+                    )
+                  }} />
+
+      <Tab.Screen name="Settings" component={SettingsScreen} options={{
+                    tabBarIcon: ({ color }) => (
+                      <Image
+                        source={require(Setting)}
+                        style={{ tintColor: color, width: sizeIcons, height: sizeIcons }}
+                      />
+                    )
+                  }}/>
     </Tab.Navigator>
   );
 }
