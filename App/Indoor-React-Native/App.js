@@ -7,7 +7,7 @@ import {topBackgroundColor} from './src/Main'
 
 export default function App() {
   return (    
-    <NavigationContainer   >
+    <NavigationContainer >
         <MyTabs style={{marginTop: Constants.statusBarHeight}} /> 
         <StatusBar
           barStyle='light-content'

@@ -9,7 +9,15 @@
     "splash": {
       "image": "./assets/leaf.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#000000",
+      "plugins": [[
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/pixel-font.ttf"
+          ]
+        }
+      ]]
     },
     "assetBundlePatterns": [
       "**/*"

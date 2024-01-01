@@ -6,6 +6,8 @@ var month = new Date().getMonth() + 1; //To get the Current Month
 var year = new Date().getFullYear(); //To get the Current Year
 
 export function PlantScreen() {
+
+
   return (
     <View style={routesStyles.container}>
         <Text style={routesStyles.text}>
@@ -34,7 +36,9 @@ const plantStyles = StyleSheet.create({
     bottom: 10,
     right: 30,
     backgroundColor: 'transparent',
-    borderRadius: 10
+    borderRadius: 10,
+    borderBottomWidth: 2.5,
+    borderBottomColor:'#343737A9'
 
   },
   bottomBox: {
@@ -48,7 +52,7 @@ const plantStyles = StyleSheet.create({
     fontSize: 25,
     fontStyle: 'italic',
     fontWeight: 'bold',
-    fontFamily: 'Cochin'
+    fontFamily: 'monospace',
     
   }
 
