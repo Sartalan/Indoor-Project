@@ -37,8 +37,9 @@ export const DiagramStyle = StyleSheet.create({
   text: {
     textAlign: "center",
     fontSize: 25,
+    fontFamily: 'serif',
     fontStyle: 'italic',
-    color: '#fff',
+    color: '#FFFFFFA1',
     backgroundColor: (backgroundPages),
     padding: 10
   },

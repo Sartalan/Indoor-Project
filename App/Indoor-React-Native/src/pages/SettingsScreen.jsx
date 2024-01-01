@@ -5,7 +5,7 @@ export function SettingsScreen() {
   return (
     <View style={routesStyles.container}>
         <Text style={routesStyles.text}>
-          Settings
+          Conming Soon
         </Text>
         <Image
           source={require('./../../assets/setting.png')}
