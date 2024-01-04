@@ -12,11 +12,12 @@ const watered = "#A3C7D6"
 const humidity = "#3F3B6C"
 const temperature = "#9F73AB"
 // each value represents a goal ring in Progress chart
-const month = new Date().getMonth() + 1; //To get the Current Month
-const year = new Date().getFullYear(); //To get the Current Year
-const data = {
+var month = new Date().getMonth() + 1; //To get the Current Month
+var year = new Date().getFullYear(); //To get the Current Year
+
+let data = {
   labels: ["watered", "humidity", "temperature"], // optional
-  data: [1, 0.6, 0.8],
+  data: [0.2, 0.6, 0.8],
   colors: [(watered), (humidity), (temperature)]
 };
 
