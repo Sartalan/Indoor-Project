@@ -1,6 +1,6 @@
-import { View , Button} from 'react-native'
-import {routesStyles} from '../styles/pagesStyles' 
+import { View , Button} from 'react-native' 
 import Animated, { useSharedValue, withSpring } from 'react-native-reanimated';
+import { GeneralStyles } from '../styles/GeneralStyles';
 
 export function SettingsScreen() {
   const width = useSharedValue(100);
@@ -10,7 +10,7 @@ export function SettingsScreen() {
   };
 
   return (
-    <View style={routesStyles.container}>
+    <View style={GeneralStyles.container}>
       <View style={{ flex: 1, alignItems: 'center' }}>
       <Animated.View
         style={{
@@ -21,7 +21,7 @@ export function SettingsScreen() {
       />
       <Button onPress={handlePress} title="Click me" />
     </View>
-    </View>
+  </View>
     
   )
 }

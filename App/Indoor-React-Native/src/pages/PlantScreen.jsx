@@ -1,6 +1,7 @@
-import {Text, View, StyleSheet, Button, Alert } from 'react-native'
-import {routesStyles} from '../styles/pagesStyles' 
+import {Text, View, Button } from 'react-native'
 import {PlantOne} from './components/PlantAnimation.jsx';
+import {GeneralStyles} from '../styles/GeneralStyles.jsx' 
+import {PlantStyle} from '../styles/screens/PlantStyle.jsx' 
 
 
 var date = new Date().getDate(); //To get the Current Date
@@ -14,18 +15,18 @@ export function PlantScreen() {
   }
 
   return (
-    <View style={routesStyles.container}>
+    <View style={GeneralStyles.container}>
       
       <PlantOne/>
       <Button onPress={Manzana}  title='Tocame 7w7'/>
 
 
 
-        <View style={plantStyles.bottomContainer}>
-            <View style={plantStyles.bottomBox}>
-                <Text style={plantStyles.bottomText}>{date + ' /'}</Text>
-                <Text style={plantStyles.bottomText}>{month + ' /'}</Text>
-                <Text style={plantStyles.bottomText}>{year}</Text>
+        <View style={PlantStyle.bottomContainer}>
+            <View style={PlantStyle.bottomBox}>
+                <Text style={PlantStyle.bottomText}>{date + ' /'}</Text>
+                <Text style={PlantStyle.bottomText}>{month + ' /'}</Text>
+                <Text style={PlantStyle.bottomText}>{year}</Text>
             </View>
         </View>
     </View>
@@ -40,29 +41,3 @@ export function PlantScreen() {
 
 
 
-const plantStyles = StyleSheet.create({
-  bottomContainer: {
-    position: "absolute",
-    bottom: 10,
-    right: 30,
-    backgroundColor: 'transparent',
-    borderRadius: 10,
-    borderBottomWidth: 2.5,
-    borderBottomColor:'#343737A9'
-
-  },
-  bottomBox: {
-    flexDirection: 'row',
-    gap: 10,
-    padding: 10
-  },
-
-  bottomText: {
-    color: '#FFFFFFA1',
-    fontSize: 25,
-    fontStyle: 'italic',
-    fontFamily: 'serif',
-    
-  }
-
-})

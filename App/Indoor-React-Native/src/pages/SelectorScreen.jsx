@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { View , Text , Image} from 'react-native'
-import {routesStyles} from '../styles/pagesStyles' 
+import {GeneralStyles} from '../styles/GeneralStyles' 
 
 export function SelectorScreen() {
   return (
-    <View style={routesStyles.container}>  
-          <Text style={routesStyles.text}>
+    <View style={GeneralStyles.container}>  
+          <Text style={GeneralStyles.text}>
             Shuffle
           </Text>
           <Image

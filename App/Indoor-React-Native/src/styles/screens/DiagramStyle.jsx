@@ -1,31 +1,13 @@
 import { StyleSheet } from "react-native";
-
+import {backgroundPages} from '../GeneralStyles'
 import { Dimensions } from "react-native";
 
-const screenWidth = Dimensions.get("window").width;
-const backgroundPages = '#090909'
-
-//* [Routes General Styles]
-export const routesStyles = StyleSheet.create({
-  container: {
-    backgroundColor: (backgroundPages),
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-    gap:10
-  },
-  text: {
-    color: '#fff',
-    fontSize: 50,
-    fontStyle: 'italic'
-  }
-});
 //? -----------------
 //? [Diagram  Styles]
 //? -----------------
 
-const uiTopIconsSize = 75
+const screenWidth = Dimensions.get("window").width;
+export const uiTopIconsSize = 75
 
 export const DiagramStyle = StyleSheet.create({
   
@@ -68,6 +50,6 @@ export const DiagramStyle = StyleSheet.create({
   modalHelpImage: {
     width: uiTopIconsSize,
     height: uiTopIconsSize,
-    opacity: .75
+    opacity: .55
   }
 })

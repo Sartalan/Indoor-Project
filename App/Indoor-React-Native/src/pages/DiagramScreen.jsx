@@ -1,6 +1,6 @@
 import {Text, View, TouchableOpacity, Image, Modal} from 'react-native'
 import { useState } from 'react';
-import {DiagramStyle} from '../styles/pagesStyles' 
+import {DiagramStyle} from '../styles/screens/DiagramStyle.jsx' 
 import {
   ProgressChart,
   ContributionGraph
@@ -61,10 +61,7 @@ export function DiagramScreen() {
   return (
   <>
       
-   
-
     <View style={DiagramStyle.container}>
-
 
       <View style={DiagramStyle.chart} >
         <ProgressChart
@@ -117,7 +114,7 @@ export function DiagramScreen() {
 
     <View style={DiagramStyle.modalTouchableContainer}>
       <TouchableOpacity 
-            activeOpacity={.2}
+            activeOpacity={.5}
             onPress={HandleModal}>
 
           <Image  style={DiagramStyle.modalHelpImage} 
@@ -126,11 +123,14 @@ export function DiagramScreen() {
       </View>
 
 {/** //* Modal Design */}
-      <Modal visible={modal}>
+
+      <Modal visible={modal}
+            animationType='fade'
+            statusBarTranslucent={true}>
         
         <View style={DiagramStyle.modalTouchableContainer}>
         <TouchableOpacity 
-          activeOpacity={.2}
+          activeOpacity={.5}
           onPress={HandleModalClose}
 >
 
@@ -139,9 +139,6 @@ export function DiagramScreen() {
 
       </TouchableOpacity>
         </View>
-
-
-
 
         <Text style={{fontSize: 100}}>Lol</Text>
       </Modal>
