@@ -1,4 +1,5 @@
-import {Text, View} from 'react-native'
+import {Text, View, TouchableOpacity, Image, Modal} from 'react-native'
+import { useState } from 'react';
 import {DiagramStyle} from '../styles/pagesStyles' 
 import {
   ProgressChart,
@@ -8,12 +9,18 @@ import { Dimensions } from "react-native";
 
 const screenWidth = Dimensions.get("window").width;
 const backgroundChart = '#121212'
+const helpImage = './../../assets/help.png'
+const closeImage = './../../assets/close.png'
 const watered = "#A3C7D6"
 const humidity = "#3F3B6C"
 const temperature = "#9F73AB"
 // each value represents a goal ring in Progress chart
 var month = new Date().getMonth() + 1; //To get the Current Month
 var year = new Date().getFullYear(); //To get the Current Year
+
+
+//? Graph Example Data | Dont Modify this Code
+//?-------------------------------------------
 
 let data = {
   labels: ["watered", "humidity", "temperature"], // optional
@@ -36,9 +43,29 @@ const commitsData = [
 ];
 
 export function DiagramScreen() {
+
+  const [modal, setModal] = useState(false)
+
+
+  const HandleModal = () => {
+    console.log("activaste el modal")
+    console.log(modal)
+    setModal(true) 
+  }
+
+  const HandleModalClose = () => {
+    setModal(false)
+  }
+
+
   return (
+  <>
+      
+   
 
     <View style={DiagramStyle.container}>
+
+
       <View style={DiagramStyle.chart} >
         <ProgressChart
           style={DiagramStyle.chartGraph}
@@ -85,7 +112,39 @@ export function DiagramScreen() {
           <Text style={DiagramStyle.text}>Dias de Riego</Text>
       </View>
     </View>
-    
-    
+
+{/*! //! [Help , Close] Touchable && Modal View  */}
+
+    <View style={DiagramStyle.modalTouchableContainer}>
+      <TouchableOpacity 
+            activeOpacity={.2}
+            onPress={HandleModal}>
+
+          <Image  style={DiagramStyle.modalHelpImage} 
+                  source={require(helpImage)} />
+        </TouchableOpacity>
+      </View>
+
+{/** //* Modal Design */}
+      <Modal visible={modal}>
+        
+        <View style={DiagramStyle.modalTouchableContainer}>
+        <TouchableOpacity 
+          activeOpacity={.2}
+          onPress={HandleModalClose}
+>
+
+        <Image  style={DiagramStyle.modalHelpImage} 
+                    source={require(closeImage)} />
+
+      </TouchableOpacity>
+        </View>
+
+
+
+
+        <Text style={{fontSize: 100}}>Lol</Text>
+      </Modal>
+    </>
   )
 }

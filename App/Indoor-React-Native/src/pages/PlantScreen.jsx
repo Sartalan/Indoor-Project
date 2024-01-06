@@ -1,7 +1,6 @@
-import {Text, View, StyleSheet } from 'react-native'
+import {Text, View, StyleSheet, Button, Alert } from 'react-native'
 import {routesStyles} from '../styles/pagesStyles' 
-import Plant from './components/Plant.svg';
-const size = 500;
+import {PlantOne} from './components/PlantAnimation.jsx';
 
 
 var date = new Date().getDate(); //To get the Current Date
@@ -10,11 +9,16 @@ var year = new Date().getFullYear(); //To get the Current Year
 
 export function PlantScreen() {
 
+  const Manzana = () => {
+    console.log("soh goloso eee pibe")
+  }
 
   return (
     <View style={routesStyles.container}>
       
-      <Plant width={size} height={size} />
+      <PlantOne/>
+      <Button onPress={Manzana}  title='Tocame 7w7'/>
+
 
 
         <View style={plantStyles.bottomContainer}>
