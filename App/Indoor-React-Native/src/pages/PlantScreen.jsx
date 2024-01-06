@@ -1,5 +1,8 @@
-import {Text, View, Image, StyleSheet } from 'react-native'
+import {Text, View, StyleSheet } from 'react-native'
 import {routesStyles} from '../styles/pagesStyles' 
+import Plant from './components/Plant.svg';
+const size = 500;
+
 
 var date = new Date().getDate(); //To get the Current Date
 var month = new Date().getMonth() + 1; //To get the Current Month
@@ -10,13 +13,9 @@ export function PlantScreen() {
 
   return (
     <View style={routesStyles.container}>
-        <Text style={routesStyles.text}>
-          Planta
-        </Text>
-        <Image
-          source={require('./../../assets/plant.png')}
-          style={{width:150, height:150}}
-        />
+      
+      <Plant width={size} height={size} />
+
 
         <View style={plantStyles.bottomContainer}>
             <View style={plantStyles.bottomBox}>
@@ -29,6 +28,13 @@ export function PlantScreen() {
     
   )
 }
+
+
+
+
+
+
+
 
 const plantStyles = StyleSheet.create({
   bottomContainer: {
@@ -48,11 +54,10 @@ const plantStyles = StyleSheet.create({
   },
 
   bottomText: {
-    color: '#FFFFFFCE',
+    color: '#FFFFFFA1',
     fontSize: 25,
     fontStyle: 'italic',
-    fontWeight: 'bold',
-    fontFamily: 'monospace',
+    fontFamily: 'serif',
     
   }
 
