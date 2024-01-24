@@ -1,16 +1,17 @@
 import { StyleSheet } from "react-native";
-import {backgroundPages} from '../GeneralStyles'
+import { backgroundPages } from '../GeneralStyles'
 import { Dimensions } from "react-native";
+export const uiTopIconsSize = 75
 
 //? -----------------
 //? [Diagram  Styles]
 //? -----------------
 
-const screenWidth = Dimensions.get("window").width;
-export const uiTopIconsSize = 75
+export const screenWidth = Dimensions.get("window").width;
+
 
 export const DiagramStyle = StyleSheet.create({
-  
+
   container: {
     backgroundColor: (backgroundPages),
     padding: 10,
@@ -39,17 +40,19 @@ export const DiagramStyle = StyleSheet.create({
     backgroundColor: (backgroundPages)
   },
 
-  modalTouchableContainer: {
+  helpImage: {
+    width: uiTopIconsSize,
+    height: uiTopIconsSize,
+    opacity: .55
+  },
+
+  touchableContainer: {
     height: 'auto',
     width: screenWidth,
     backgroundColor: '#000',
     padding: 0,
     justifyContent: 'center',
     alignItems: 'flex-end'
-  },
-  modalHelpImage: {
-    width: uiTopIconsSize,
-    height: uiTopIconsSize,
-    opacity: .55
   }
+
 })

@@ -10,7 +10,7 @@ export const GeneralStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    gap:10
+    gap: 10
   },
   text: {
     color: '#fff',

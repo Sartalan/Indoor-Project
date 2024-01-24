@@ -1,7 +1,7 @@
-import {Text, View, Button } from 'react-native'
-import {PlantOne} from './components/PlantAnimation.jsx';
-import {GeneralStyles} from '../styles/GeneralStyles.jsx' 
-import {PlantStyle} from '../styles/screens/PlantStyle.jsx' 
+import { Text, View, Button } from 'react-native'
+import { PlantOne } from './components/PlantAnimation.jsx';
+import { GeneralStyles } from '../styles/GeneralStyles.jsx'
+import { PlantStyle } from '../styles/screens/PlantStyle.jsx'
 
 
 var date = new Date().getDate(); //To get the Current Date
@@ -16,21 +16,21 @@ export function PlantScreen() {
 
   return (
     <View style={GeneralStyles.container}>
-      
-      <PlantOne/>
-      <Button onPress={Manzana}  title='Tocame 7w7'/>
+
+      <PlantOne />
+      <Button onPress={Manzana} title='Tocame 7w7' />
 
 
 
-        <View style={PlantStyle.bottomContainer}>
-            <View style={PlantStyle.bottomBox}>
-                <Text style={PlantStyle.bottomText}>{date + ' /'}</Text>
-                <Text style={PlantStyle.bottomText}>{month + ' /'}</Text>
-                <Text style={PlantStyle.bottomText}>{year}</Text>
-            </View>
+      <View style={PlantStyle.bottomContainer}>
+        <View style={PlantStyle.bottomBox}>
+          <Text style={PlantStyle.bottomText}>{date + ' /'}</Text>
+          <Text style={PlantStyle.bottomText}>{month + ' /'}</Text>
+          <Text style={PlantStyle.bottomText}>{year}</Text>
         </View>
+      </View>
     </View>
-    
+
   )
 }
 

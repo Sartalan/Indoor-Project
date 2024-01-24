@@ -1,6 +1,7 @@
-import {Text, View, TouchableOpacity, Image, Modal} from 'react-native'
+import { Text, View, TouchableOpacity, Image, Modal } from 'react-native'
 import { useState } from 'react';
-import {DiagramStyle} from '../styles/screens/DiagramStyle.jsx' 
+import { DiagramStyle } from '../styles/screens/DiagramStyle.jsx'
+import { ModalStyle } from '../styles/ModalStyle.jsx';
 import {
   ProgressChart,
   ContributionGraph
@@ -50,7 +51,7 @@ export function DiagramScreen() {
   const HandleModal = () => {
     console.log("activaste el modal")
     console.log(modal)
-    setModal(true) 
+    setModal(true)
   }
 
   const HandleModalClose = () => {
@@ -59,88 +60,95 @@ export function DiagramScreen() {
 
 
   return (
-  <>
-      
-    <View style={DiagramStyle.container}>
+    <>
 
-      <View style={DiagramStyle.chart} >
-        <ProgressChart
-          style={DiagramStyle.chartGraph}
-          data={data}
-          width={screenWidth - 20}
-          height={250}
-          strokeWidth={10}
-          radius={30}
-          chartConfig={{
-            backgroundColor: (backgroundChart),
-            backgroundGradientFrom: (backgroundChart),
-            backgroundGradientTo: (backgroundChart),
-            decimalPlaces: 2, // optional, defaults to 2dp
-            color: (opacity = 1) => `rgba(250, 100, 255, ${opacity})`,
-            labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-            propsForLabels: {
-              fill: 'white',
-              fontSize: 20,
-              
-            }
-          }}
-          hideLegend={true}
-          withCustomBarColorFromData
-        />
+      <View style={DiagramStyle.container}>
+
+        <View style={DiagramStyle.chart} >
+          <ProgressChart
+            style={DiagramStyle.chartGraph}
+            data={data}
+            width={screenWidth - 20}
+            height={250}
+            strokeWidth={10}
+            radius={30}
+            chartConfig={{
+              backgroundColor: (backgroundChart),
+              backgroundGradientFrom: (backgroundChart),
+              backgroundGradientTo: (backgroundChart),
+              decimalPlaces: 2, // optional, defaults to 2dp
+              color: (opacity = 1) => `rgba(250, 100, 255, ${opacity})`,
+              labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+              propsForLabels: {
+                fill: 'white',
+                fontSize: 20,
+
+              }
+            }}
+            hideLegend={true}
+            withCustomBarColorFromData
+          />
           <Text style={DiagramStyle.text}>Sensores</Text>
-      </View>
+        </View>
 
-      <View style={DiagramStyle.chart}>
-      <ContributionGraph
-          style={DiagramStyle.chartGraph}
-          values={commitsData}
-          endDate={new Date((year) + "-" + (month + 3) + "-01")} 
-          numDays={100}
-          width={screenWidth - 20}
-          height={225}
-          chartConfig={{
-            backgroundGradientFrom: (backgroundChart),
-            backgroundGradientTo: (backgroundChart),
-            decimalPlaces: 2, // optional, defaults to 2dp
-            color: (opacity = 1) => `rgba(100, 100, 200, ${opacity})`,
-            labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-          }}
-        />
+        <View style={DiagramStyle.chart}>
+          <ContributionGraph
+            style={DiagramStyle.chartGraph}
+            values={commitsData}
+            endDate={new Date((year) + "-" + (month + 3) + "-01")}
+            numDays={100}
+            width={screenWidth - 20}
+            height={225}
+            chartConfig={{
+              backgroundGradientFrom: (backgroundChart),
+              backgroundGradientTo: (backgroundChart),
+              decimalPlaces: 2, // optional, defaults to 2dp
+              color: (opacity = 1) => `rgba(100, 100, 200, ${opacity})`,
+              labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+            }}
+          />
           <Text style={DiagramStyle.text}>Dias de Riego</Text>
+        </View>
       </View>
-    </View>
 
-{/*! //! [Help , Close] Touchable && Modal View  */}
+      {/*! //! [Help , Close] Touchable && Modal View  */}
 
-    <View style={DiagramStyle.modalTouchableContainer}>
-      <TouchableOpacity 
-            activeOpacity={.5}
-            onPress={HandleModal}>
+      <View style={DiagramStyle.touchableContainer}>
+        <TouchableOpacity
+          activeOpacity={.5}
+          onPress={HandleModal}>
 
-          <Image  style={DiagramStyle.modalHelpImage} 
-                  source={require(helpImage)} />
+          <Image style={DiagramStyle.helpImage}
+            source={require(helpImage)} />
         </TouchableOpacity>
       </View>
 
-{/** //* Modal Design */}
-
+      {/** //* Modal Design */}
       <Modal visible={modal}
-            animationType='fade'
-            statusBarTranslucent={true}>
-        
-        <View style={DiagramStyle.modalTouchableContainer}>
-        <TouchableOpacity 
-          activeOpacity={.5}
-          onPress={HandleModalClose}
->
+        animationType='fade'
+        statusBarTranslucent={false}
+        transparent={true}
+        style={ModalStyle.modal}
+      >
 
-        <Image  style={DiagramStyle.modalHelpImage} 
-                    source={require(closeImage)} />
 
-      </TouchableOpacity>
+        <View style={ModalStyle.modalContainer}>
+          <View style={ModalStyle.allContent}>
+            <View style={ModalStyle.top}>
+              <TouchableOpacity
+                activeOpacity={.5}
+                onPress={HandleModalClose}
+              >
+                <Image style={ModalStyle.modalImage}
+                  source={require(closeImage)} />
+              </TouchableOpacity>
+            </View>
+            {/*--------------------*/}
+            <View style={ModalStyle.bottom}>
+              <Text style={ModalStyle.text}>Me activaste</Text>
+            </View>
+          </View>
         </View>
-
-        <Text style={{fontSize: 100}}>Lol</Text>
       </Modal>
     </>
   )

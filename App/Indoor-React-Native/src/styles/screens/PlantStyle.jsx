@@ -8,7 +8,7 @@ export const PlantStyle = StyleSheet.create({
     backgroundColor: 'transparent',
     borderRadius: 10,
     borderBottomWidth: 2.5,
-    borderBottomColor:'#343737A9'
+    borderBottomColor: '#343737A9'
 
   },
   bottomBox: {
@@ -22,7 +22,7 @@ export const PlantStyle = StyleSheet.create({
     fontSize: 25,
     fontStyle: 'italic',
     fontFamily: 'serif',
-    
+
   }
 
 })

@@ -3,6 +3,6 @@ const size = 500;
 
 export function PlantOne() {
   return (
-    <Plant width={size} height={size}/>
+    <Plant width={size} height={size} />
   )
 }
