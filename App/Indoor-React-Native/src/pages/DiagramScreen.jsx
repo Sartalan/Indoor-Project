@@ -1,7 +1,8 @@
-import { Text, View, TouchableOpacity, Image, Modal } from 'react-native'
+import { Text, View, TouchableOpacity, Image, Modal, ScrollView } from 'react-native'
 import { useState } from 'react';
 import { DiagramStyle } from '../styles/screens/DiagramStyle.jsx'
 import { ModalStyle } from '../styles/ModalStyle.jsx';
+import {DiagramGuide , GuideStyle} from './components/DiagramGuide.jsx'
 import {
   ProgressChart,
   ContributionGraph
@@ -135,6 +136,8 @@ export function DiagramScreen() {
         <View style={ModalStyle.modalContainer}>
           <View style={ModalStyle.allContent}>
             <View style={ModalStyle.top}>
+
+              <Text style={ModalStyle.text}>Guía</Text>
               <TouchableOpacity
                 activeOpacity={.5}
                 onPress={HandleModalClose}
@@ -144,9 +147,32 @@ export function DiagramScreen() {
               </TouchableOpacity>
             </View>
             {/*--------------------*/}
-            <View style={ModalStyle.bottom}>
-              <Text style={ModalStyle.text}>Me activaste</Text>
-            </View>
+            <ScrollView 
+            style={ModalStyle.bottom}
+            scrollEnabled={true}
+
+            contentContainerStyle={GuideStyle.guideItems} 
+            scro
+            >
+              <DiagramGuide 
+                Info="Por cada"
+              />
+                <DiagramGuide 
+                Info="Bloque"
+              />
+                <DiagramGuide 
+                Info="Acá"
+              />
+                 <DiagramGuide 
+                Info="Habría una guía"
+              />
+                <DiagramGuide 
+                Info="Sobre como recibir datos"
+              />
+                <DiagramGuide 
+                Info="De un servidor Backend"
+              />
+            </ScrollView>
           </View>
         </View>
       </Modal>

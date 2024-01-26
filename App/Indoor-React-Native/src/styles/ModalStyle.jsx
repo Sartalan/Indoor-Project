@@ -7,7 +7,8 @@ export const ModalStyle = StyleSheet.create({
   modal: {
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 1
+    flex: 1,
+
   },
 
   modalContainer: {
@@ -18,7 +19,7 @@ export const ModalStyle = StyleSheet.create({
 
   allContent: {
     width: screenWidth - 100,
-    height: 500,
+    height: 550,
 
   },
 
@@ -31,14 +32,15 @@ export const ModalStyle = StyleSheet.create({
     width: 'auto',
     height: 75,
     backgroundColor: '#181921',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    padding: 15
   },
 
   modalImage: {
     width: 50,
     height: 50,
-    margin: 10,
     opacity: .5
   },
 
@@ -47,9 +49,12 @@ export const ModalStyle = StyleSheet.create({
 /*---------- */
 
   bottom: {
-    backgroundColor: '#000000',
+    backgroundColor: '#1C1F27',
     flex: 1,
-    borderRadius: modalRadius
+    borderBottomEndRadius: modalRadius,
+    borderBottomStartRadius: modalRadius,
+    gap: 25,
+    height: 100,
   },
 
   text: {
@@ -57,5 +62,11 @@ export const ModalStyle = StyleSheet.create({
     fontFamily: 'serif',
     fontStyle: 'italic',
     fontSize: 25
-  }
+  },
+
+  
+  /*Guide Styles */
+/*---------- */
+
 });
+
