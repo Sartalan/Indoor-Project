@@ -150,7 +150,6 @@ export function DiagramScreen() {
             <ScrollView 
             style={ModalStyle.bottom}
             scrollEnabled={true}
-
             contentContainerStyle={GuideStyle.guideItems} 
             scro
             >
