@@ -7,7 +7,7 @@ function App() {
       <div className="container">
         <div className="left-section">
           <p className="top-text">Send a Push Notification!</p>
-          <img className="indoor-img" src="https://cdn-icons-png.flaticon.com/512/6565/6565893.png" alt="" />
+          <img className="indoor-img" src="https://www.iconsdb.com/icons/preview/white/facebook-3-xxl.png" alt="" />
           <blockquote className="bottom-text">Indoor-App</blockquote>
         </div>
 
