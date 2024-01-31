@@ -18,9 +18,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: ;
   background-color: var(--bg-color);
 }
 /** Container:*/
+
+
+
 
 .form-container {
   width: 20em;
@@ -86,15 +90,16 @@ body {
   font-style: italic;
 }
 
-.top > .box > input {
-  display: flex;
-  text-align: start;
-
+.top > .box > textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 15em;
   background-color: rgb(8, 8, 8);
   border: solid 1px rgba(0, 0, 0, 0.171);
   border-radius: .25em;
-  padding: 5em 0 5em 0;
   color: #fff;
+  font-size: 1.25em;
+  resize: none;
 }
 
 .bottom > button {
@@ -103,9 +108,10 @@ body {
   height: 50%;
   border-radius: 0.25em;
   cursor: pointer;
+  transition: background-color .1s ease;
 }
 
 .bottom > button:hover {
-  background-color: red;
+  background-color: rgb(93, 121, 216);
 }
 

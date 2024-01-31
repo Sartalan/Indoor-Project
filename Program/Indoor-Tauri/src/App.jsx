@@ -5,8 +5,9 @@ function App() {
   return (
 
     <>
-      <div className="top-bar"></div>
 
+
+      <div className="top-bar"></div>
       <form className="form-container">
 
         <div className="top">
@@ -26,8 +27,8 @@ export default App;
 function Item() {
   return (
     <div className="box">
-      <label for="textoInput">Notificación:</label>
-      <textarea type="text" id="textoInput" name="textoInput" placeholder="Soy un Manzanodwadwa" required />
+      <label for="textoInput">Send a message</label>
+      <textarea type="text" id="textoInput" name="textoInput" required />
     </div>
   )
 }
