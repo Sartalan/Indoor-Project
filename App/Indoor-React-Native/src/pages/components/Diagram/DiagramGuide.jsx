@@ -1,6 +1,4 @@
 import { Text, View, StyleSheet} from 'react-native'
-import { ModalStyle } from '../../styles/ModalStyle'
-
 
 export function DiagramGuide({Info}) {
   return (
