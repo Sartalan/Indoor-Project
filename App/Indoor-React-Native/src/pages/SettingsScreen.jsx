@@ -8,7 +8,7 @@ export function SettingsScreen() {
   let [text, setText] = useState('')
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+    fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
       .then(res => res.json())
       .then(
         (result) => {
