@@ -5,7 +5,7 @@ import { GeneralStyles } from '../styles/GeneralStyles';
 export function SettingsScreen() {
 
   let [connection, setConnection] = useState(false)
-  let [text , setText] = useState('')
+  let [text, setText] = useState('')
 
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon/ditto")
@@ -26,13 +26,22 @@ export function SettingsScreen() {
   }, []);
 
   const getContent = () => {
-    if (connection == true) {
-      return <Text style={{ color: '#fff', fontSize: 50 }}>{text}</Text>
-    }
 
-    else {
-      return <Text style={{ color: '#fff', fontSize: 50 }}>Desconectado</Text>
-    }
+    return (
+      <Text style={{ color: '#fff', fontSize: 50 }}>
+        {connection ? text : 'Desconectado'}
+      </Text>
+    )
+
+    // if (connection == true) {
+    //   return <Text style={{ color: '#fff', fontSize: 50 }}>{text}</Text>
+    // }
+
+    // else {
+    //   return <Text style={{ color: '#fff', fontSize: 50 }}>Desconectado</Text>
+    // }
+
+    //? Código comentado con el objetivo de aprender (っ▀¯▀)つ
   }
 
 
