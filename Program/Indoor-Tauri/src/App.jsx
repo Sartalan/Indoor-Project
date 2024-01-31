@@ -1,14 +1,33 @@
 
-import "./App.css";
 
 function App() {
 
-
   return (
-    <div className="container">
-      <h1>Hello World</h1>
-    </div>
-  );
+
+    <>
+      <div className="top-bar"></div>
+
+      <form className="form-container">
+
+        <div className="top">
+          <Item />
+        </div>
+
+        <div className="bottom">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </>
+  )
 }
 
 export default App;
+
+function Item() {
+  return (
+    <div className="box">
+      <label for="textoInput">Notificación:</label>
+      <input type="text" id="textoInput" name="textoInput" required />
+    </div>
+  )
+}
