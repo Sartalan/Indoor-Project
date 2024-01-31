@@ -1,19 +1,21 @@
-import { View, Text} from 'react-native'
-import { useEffect, useState  } from 'react';
+import { View, Text } from 'react-native'
+import { useEffect, useState } from 'react';
 import { GeneralStyles } from '../styles/GeneralStyles';
 
 export function SettingsScreen() {
 
-
   let [connection, setConnection] = useState(false)
+  let [text , setText] = useState('')
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+    fetch("https://pokeapi.co/api/v2/pokemon/ditto")
       .then(res => res.json())
       .then(
         (result) => {
           console.log(result.name)
           setConnection(connection = true)
+          setText(text = (result.name))
+          console.log(text)
           console.log(connection)
         },
         (error) => {
@@ -24,26 +26,22 @@ export function SettingsScreen() {
   }, []);
 
   const getContent = () => {
-
-    if(connection == true) {
-      return <Text style={{color: '#fff', fontSize: 50}}>Conectado</Text>
+    if (connection == true) {
+      return <Text style={{ color: '#fff', fontSize: 50 }}>{text}</Text>
     }
 
     else {
-      return <Text style={{color: '#fff', fontSize: 50}}>Desconectado</Text>
+      return <Text style={{ color: '#fff', fontSize: 50 }}>Desconectado</Text>
     }
-
   }
 
-  
 
+  return (
 
-return (
+    <View style={GeneralStyles.container}>
+      {getContent()}
+    </View>
 
-  <View style={GeneralStyles.container}>
-    {getContent()}
-  </View>
-    
 
 
 
