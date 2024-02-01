@@ -1,4 +1,4 @@
-
+import IndoorIcon from './assets/plant.png'
 
 function App() {
 
@@ -6,9 +6,9 @@ function App() {
     <>
       <div className="container">
         <div className="left-section">
-          <p className="top-text">Send a Push Notification!</p>
-          <img className="indoor-img" src="https://www.iconsdb.com/icons/preview/white/facebook-3-xxl.png" alt="" />
-          <blockquote className="bottom-text">Indoor-App</blockquote>
+          <p className="top-text">¡Send a Push Notification!</p>
+          <img className="indoor-img" src={IndoorIcon} alt="" />
+          <blockquote className="bottom-text">◉Indoor-App</blockquote>
         </div>
 
 
@@ -39,13 +39,6 @@ function Item() {
     <div className="box">
       <label for="textoInput">Send a message</label>
       <textarea type="text" id="textoInput" name="textoInput" required />
-
-
-
-
     </div>
-
-
-
   )
 }
