@@ -1,5 +1,9 @@
 /*? Default*/
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --bg-color:#000000;
   --form-template-color:#0f0f0f4d;
@@ -90,6 +94,10 @@ body {
   align-items: center;
   padding: 1em;
   flex-direction: column;
+} 
+
+.right-section .top {
+  height: auto;
 }
 
 .right-section .top-bar {
@@ -157,7 +165,7 @@ body {
   .left-section .bottom-text {
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     height: 2.5em;
     margin: auto 0 auto 0;
   }

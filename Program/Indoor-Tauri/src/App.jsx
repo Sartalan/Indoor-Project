@@ -11,21 +11,11 @@ function App() {
           <blockquote className="bottom-text">◉Indoor-App</blockquote>
         </div>
 
-
-
         <div className="right-section">
           <div className="top-bar"></div>
           <form className="form-container">
-
-            <div className="top">
-              <Item />
-            </div>
-
-            <div className="bottom">
-              <button type="submit">Enviar</button>
-            </div>
+            <FormContent />
           </form>
-
         </div>
       </div>
     </>
@@ -34,11 +24,20 @@ function App() {
 
 export default App;
 
-function Item() {
+
+function FormContent() {
   return (
-    <div className="box">
-      <label for="textoInput">Send a message</label>
-      <textarea type="text" id="textoInput" name="textoInput" required />
-    </div>
+    <>
+      <div className="top">
+        <div className="box p-2" >
+          <label for="textoInput" className='text-white text-lg italic font-semibold px-3 pb-1'>Send a message:</label>
+          <textarea type="text" id="textoInput" name="textoInput" required className=' bg-black text-white w-full h-40 max-md:h-48 resize-none rounded-md overflow-hidden' />
+        </div>
+      </div>
+
+      <div className="bottom p-2 relative ">
+        <button type="submit" className='text-white bg-black w-full rounded-sm text-lg transition-colors hover:text-black hover:bg-white'>Enviar</button>
+      </div>
+    </>
   )
 }
