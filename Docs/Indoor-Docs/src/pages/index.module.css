@@ -4,16 +4,26 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 0 0;
+  height: 90vh;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-color: black;
+  color: white;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+    
   }
+}
+
+.plantIcon {
+  width: 10rem;
+  height: auto;
+  margin: 1rem;
 }
 
 .buttons {
@@ -21,3 +31,5 @@
   align-items: center;
   justify-content: center;
 }
+
+
