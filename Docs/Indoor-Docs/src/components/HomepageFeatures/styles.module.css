@@ -3,17 +3,49 @@
 ? -----------
 */
 
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
+#techContainer {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
   width: 100%;
-  background-color: #181921;
+  height: 100%;
 }
 
-.featureSvg {
+.techSvg {
   width: 3rem;
   height: 3rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  filter: grayscale(80%);
+
+}
+
+.techSvg:hover {
+  transform: scale(1.15);
+  filter: grayscale(0);
+
+
+}
+
+
+
+
+.techText {
+  transition: all 0.5s ease;
+  opacity: .5;
+  text-decoration: none;
+  user-select: none;
+  cursor: default;
+  font-size: .9rem;
+  text-decoration: none;
+
+}
+
+.techSvg:hover + .techText{
+  transform: scale(1.15);
+  opacity: 1;
 }
 
 
@@ -24,13 +56,22 @@
 */
 
 .container {
-  width: 50%;
+  width: 40%;
   margin: auto;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  background-color: #181921;
 }
 
 .techTitle {
   text-align: center;
   font-style: italic;
+  user-select: none;
 }
 
 .hr {
