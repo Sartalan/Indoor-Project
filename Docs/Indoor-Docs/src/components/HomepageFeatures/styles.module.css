@@ -1,11 +1,39 @@
+/* 
+? Features()
+? -----------
+*/
+
 .features {
   display: flex;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  background-color: #181921;
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  width: 3rem;
+  height: 3rem;
+}
+
+
+
+/* 
+? HomeFeatures()
+? ---------------
+*/
+
+.container {
+  width: 50%;
+  margin: auto;
+}
+
+.techTitle {
+  text-align: center;
+  font-style: italic;
+}
+
+.hr {
+  opacity: .6;
+  margin: 2em;
 }

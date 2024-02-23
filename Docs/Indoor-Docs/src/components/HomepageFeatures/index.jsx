@@ -2,60 +2,116 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
-const FeatureList = [
+
+const FeatureListOne = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: 'HTML5',
+    Svg: require('@site/static/brand/html5-logo.svg').default,
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: 'CSS3',
+    Svg: require('@site/static/brand/css3-logo.svg').default,
   },
   {
-    title: 'Powered by React lol',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: 'Javascript',
+    Svg: require('@site/static/brand/javascript-logo.svg').default,
   },
+  {
+    title: 'React', 
+    Svg: require('@site/static/brand/react-logo.svg').default
+  },
+  {
+    title: 'NodeJs',
+    Svg: require('@site/static/brand/nodejs-logo.svg').default,
+  },
+ 
+
+  
+
+
 ];
+/*?dwadwaawdd */
+const FeatureListTwo = [
+  {
+    title: 'Express',
+    Svg: require('@site/static/brand/express-logo.svg').default,
+  },
+  
+  {
+    title: 'Tauri',
+    Svg: require('@site/static/brand/tauri-logo.svg').default,
+  },
+
+
+  {
+    title: 'Rust',
+    Svg: require('@site/static/brand/rust-logo.svg').default,
+  },
+  {
+    title: 'C',
+    Svg: require('@site/static/brand/c-logo.svg').default,
+  },
+
+];
+
+const FeatureListThree = [
+  {
+    title: 'Git', 
+    Svg: require('@site/static/brand/git-logo.svg').default
+  },
+
+  {
+    title: 'Github', 
+    Svg: require('@site/static/brand/github-logo.svg').default
+  },
+
+
+  {
+    title: 'RaspberryPi',
+    Svg: require('@site/static/brand/raspberrypi-logo.svg').default,
+  },
+]
+
+const FeatureListFour = [
+
+
+
+  
+]
+
 
 function Feature({Svg, title, description}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+      <div className="col text--center">
+        <Svg className={styles.featureSvg} role="img"/>
+        <p>{title}</p>
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
   );
 }
 
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <h2>Tecnologias Usadas:</h2>
+      <div className={styles.container}>
+      <h2 className={styles.techTitle}>Tecnologias Usadas:</h2>
+      <hr className={styles.hr} />
         <div className="row">
-          {FeatureList.map((props, idx) => (
+          {FeatureListOne.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
+        </div>
+        <div className="row">
+          {FeatureListTwo.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
+        </div>
+        <div className="row">
+          {FeatureListThree.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
+        </div>
+        <div className="row">
+          {FeatureListFour.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
@@ -63,3 +119,17 @@ export default function HomepageFeatures() {
     </section>
   );
 }
+
+/**
+ * 
+ * 
+ * { 
+title: 'Easy to Use',
+Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+description: (
+  <>
+    Docusaurus was designed from the gr
+  </>
+),
+},
+ */
