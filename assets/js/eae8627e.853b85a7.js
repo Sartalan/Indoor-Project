@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkindoor_docs=self.webpackChunkindoor_docs||[]).push([[1886],{9261:o=>{o.exports=JSON.parse('{"label":"facebook","permalink":"/Indoor-Project/blog/tags/facebook","allTagsPath":"/Indoor-Project/blog/tags","count":1,"unlisted":false}')}}]);

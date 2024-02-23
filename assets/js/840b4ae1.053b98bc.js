@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkindoor_docs=self.webpackChunkindoor_docs||[]).push([[8706],{726:o=>{o.exports=JSON.parse('{"label":"docusaurus","permalink":"/Indoor-Project/blog/tags/docusaurus","allTagsPath":"/Indoor-Project/blog/tags","count":4,"unlisted":false}')}}]);
