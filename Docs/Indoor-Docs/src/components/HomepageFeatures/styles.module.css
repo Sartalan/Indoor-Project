@@ -2,8 +2,12 @@
 ? Features()
 ? -----------
 */
+:root {
+  --tech-transition: all ease 0.15s;
+  --bg-color:#181921;
+}
 
-#techContainer {
+#techA {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -11,29 +15,24 @@
   height: 100%;
 }
 
-.techSvg {
+.techIcon {
   width: 3rem;
   height: 3rem;
-  transition: all 0.25s ease;
+  transition: var(--tech-transition);
   text-decoration: none;
   color: inherit;
   cursor: pointer;
   filter: grayscale(80%);
-
 }
 
-.techSvg:hover {
+.techIcon:hover {
+  transition: var(--tech-transition);
   transform: scale(1.15);
   filter: grayscale(0);
-
-
 }
 
-
-
-
 .techText {
-  transition: all 0.5s ease;
+  transition: var(--tech-transition);
   opacity: .5;
   text-decoration: none;
   user-select: none;
@@ -43,12 +42,12 @@
 
 }
 
-.techSvg:hover + .techText{
+.techIcon:hover+.techText {
   transform: scale(1.15);
+  transition: var(--tech-transition);
+
   opacity: 1;
 }
-
-
 
 /* 
 ? HomeFeatures()
@@ -60,12 +59,12 @@
   margin: auto;
 }
 
-.features {
+.techSection {
   display: flex;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
-  background-color: #181921;
+  background-color: var(--bg-color);
 }
 
 .techTitle {
