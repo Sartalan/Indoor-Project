@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import { FeatureListOne, FeatureListTwo, FeatureListThree } from './../HomepageIcons/FeatureIcons'
+import { IconsListOne, IconsListTwo, IconsListThree } from './../HomepageIcons/FeatureIcons'
 
 function Feature({ Svg, title, url }) {
   return (
@@ -19,17 +19,17 @@ export default function HomepageFeatures() {
         <h2 className={styles.techTitle}>Tecnologias Usadas:</h2>
         <hr className={styles.hr} />
         <div className="row">
-          {FeatureListOne.map((props, idx) => (
+          {IconsListOne.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
         <div className="row">
-          {FeatureListTwo.map((props, idx) => (
+          {IconsListTwo.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
         <div className="row">
-          {FeatureListThree.map((props, idx) => (
+          {IconsListThree.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>

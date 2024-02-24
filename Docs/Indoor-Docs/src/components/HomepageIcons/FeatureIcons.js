@@ -1,4 +1,4 @@
-export const FeatureListOne = [
+export const IconsListOne = [
   {
     title: 'HTML5',
     url: 'https://developer.mozilla.org/es/docs/Web/HTML',
@@ -27,7 +27,7 @@ export const FeatureListOne = [
 
 ];
 
-export const FeatureListTwo = [
+export const IconsListTwo = [
   {
     title: 'Express.js',
     url: 'https://expressjs.com/es/',
@@ -59,7 +59,7 @@ export const FeatureListTwo = [
 
 ];
 
-export const FeatureListThree = [
+export const IconsListThree = [
   {
     title: 'Git', 
     url: 'https://git-scm.com',
